@@ -8,7 +8,7 @@ from selenium.webdriver.chrome.service import Service
 import xlrd
 
 arq = open("Resultado.xls","w")
-workbook = xlrd.open_workbook(r'C:\Users\thexe\OneDrive\Python Bot\Projeto_CVM\CNPJ_FIs.xls')
+workbook = xlrd.open_workbook(r'C:\Repositorio projeto-automacao\projeto-automacao\CNPJ_FIs.xls')
 sheet = workbook.sheet_by_name('CNPJ_FI')
 rows = sheet.nrows
 columns = sheet.ncols
@@ -17,7 +17,7 @@ options = webdriver.ChromeOptions()
 options.add_argument('--disable-logging')
 options.add_argument('--log-level=3')
 
-driver = webdriver.Chrome("C:/Users/thexe\OneDrive/Área de Trabalho/Xeco/Robo/chromedriver.exe", options= options)
+driver = webdriver.Chrome("C:/Repositorio projeto-automacao/projeto-automacao/chromedriver.exe", options= options)
 driver.get ("https://web.cvm.gov.br/app/fundosweb/#/consultaPublica")
 
 for curr_row in range(0,rows):
