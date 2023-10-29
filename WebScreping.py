@@ -13,11 +13,11 @@ sheet = workbook.sheet_by_name('CNPJ_FI')
 rows = sheet.nrows
 columns = sheet.ncols
 
-options = webdriver.ChromeOptions()
+options = webdriver.EdgeOptions()
 options.add_argument('--disable-logging')
 options.add_argument('--log-level=3')
 
-driver = webdriver.Chrome("C:/Repositorio projeto-automacao/projeto-automacao/chromedriver.exe", options= options)
+driver = webdriver.Edge("C:\Repositorio projeto-automacao\projeto-automacao\msedgedriver.exe", options= options)
 driver.get ("https://web.cvm.gov.br/app/fundosweb/#/consultaPublica")
 
 for curr_row in range(0,rows):
